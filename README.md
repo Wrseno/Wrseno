@@ -26,8 +26,7 @@ I'm a junior web developer, until now I'm still learning programming.
 
 ### Github Stats
 
-[![Anand K. Mainali GitHub Stats](https://github-readme-stats.vercel.app/api?username=Wrseno&show_icons=true&count_private=true)]
-(https://github.com/Wrseno)
+[![Warseno GitHub Stats](https://github-readme-stats.vercel.app/api?username=Wrseno&show_icons=true&count_private=true)](https://github.com/Wrseno)
 
 <h3> 🤝🏻 Connect with Me </h3>
 
