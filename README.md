@@ -1,8 +1,3 @@
-<p align="center">
- <img width="100px" src="https://ibb.co/Tv47bKN" align="center" alt="Github Readme Stats" />
- <h2 align="center">Profile</h2>
-</p>
-
 ### Hi there 👋 I'm [Warseno Bambang S.](https://wrseno.my.id)
 
 <img src="https://komarev.com/ghpvc/?username=Wrseno" alt="Warseno Bambang S" />
