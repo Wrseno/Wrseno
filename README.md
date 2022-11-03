@@ -1,4 +1,4 @@
-### Hi there 👋 I'm [Warseno Bambang S.](https://wrseno.my.id)
+### Hi there 👋 I'm [Warseno Bambang Setyono](https://wrseno.my.id)
 
 <div>
  <p>
@@ -10,7 +10,7 @@ I'm a junior web developer, until now I'm still learning programming.
 
 [![Warseno GitHub Stats](https://github-readme-stats.vercel.app/api?username=Wrseno&show_icons=true&count_private=true)](https://github.com/Wrseno)
 
-<img src="https://komarev.com/ghpvc/?username=Wrseno" alt="Warseno Bambang S" />
+<img src="https://komarev.com/ghpvc/?username=Wrseno" alt="Warseno Bambang Setyono" />
 
 <h3> 🤝🏻 Connect with Me </h3>
 
