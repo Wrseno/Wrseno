@@ -8,7 +8,7 @@ I'm a junior web developer, until now I'm still learning programming.
 
 ### Github Stats
 
-[![Warseno Bambang Setyono GitHub Stats](https://github-readme-stats.vercel.app/api?username=Wrseno&show_icons=true&count_private=true)](https://github.com/Wrseno)
+<img align="center" src="https://github-readme-stats.vercel.app/api?username=Wrseno&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40" alt="Warseno's Github Stats">
 
 <img src="https://komarev.com/ghpvc/?username=Wrseno" alt="Warseno Bambang Setyono" />
 
