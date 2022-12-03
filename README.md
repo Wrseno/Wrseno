@@ -6,7 +6,10 @@ I'm a junior web developer, until now I'm still learning programming.
 </p>
 </div>
 
-<img src="https://komarev.com/ghpvc/?username=Wrseno" alt="Warseno Bambang Setyono" />
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Wrseno/count.svg" />
+</p>
 
 <h3> 🤝🏻 Connect with Me </h3>
 
