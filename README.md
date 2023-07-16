@@ -24,12 +24,6 @@ I'm a junior web developer, until now I'm still learning programming.
 [![MongoDB Badge](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-### Github Stats
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Wrseno&show_icons=true&theme=tokyonight"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Wrseno&layout=compact&langs_count=8&theme=tokyonight"/>
-</p>
  
 <div align="center"> 
   <p>Visitor count</p>
