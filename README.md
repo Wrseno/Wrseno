@@ -2,7 +2,7 @@
 
 <div>
  <p>
-I'm a junior web developer, until now I'm still learning programming.
+I'm a junior web developer.
 </p>
 </div>
 
