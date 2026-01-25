@@ -1,8 +1,8 @@
-## Hi there 👋 I'm [Warseno Bambang Setyono](https://wrseno.my.id)
+## Hi there 👋 I'm [Warseno Bambang Setyono](https://seno.web.id)
 
 <div>
  <p>
-I'm a junior web developer.
+I'm a Fullstack Web Developer.
 </p>
 </div>
 
