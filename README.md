@@ -32,10 +32,10 @@ I am a **Computer Science Student** and a passionate **Full-Stack Web Developer*
 > "I switched to Linux Mint just to get that extra 1% performance for my 8GB RAM laptop, and it was totally worth it."
 
 <div align="center">
-  <a href="mailto:emailanda@example.com">
+  <a href="mailto:warsenosetyono@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
-  <a href="https://linkedin.com/in/usernameanda">
+  <a href="https://linkedin.com/in/warseno">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </div>
