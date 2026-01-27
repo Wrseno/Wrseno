@@ -1,8 +1,8 @@
 # Hi there, I'm Seno! 👋
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=1000&color=F7F7F7&background=00000000&vCenter=true&width=435&lines=Full-Stack+Web+Developer;Linux+Mint+User;INTJ+Personality)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=1000&color=F7F7F7&background=00000000&vCenter=true&width=435&lines=Full-Stack+Web+Developer;IT+Enthusiast;)](https://git.io/typing-svg)
 
-I am a **Computer Science Student** and a passionate **Full-Stack Web Developer** from Indonesia. I love building efficient, scalable web applications and experimenting with IoT devices. Currently moving my workflow to **Linux Mint** to boost productivity and performance.
+I am a **Computer Science Student** and a passionate **Full-Stack Web Developer** from Indonesia. I love building efficient, scalable web applications. Currently moving my workflow to **Linux Mint** to boost productivity and performance.
 
 ---
 
