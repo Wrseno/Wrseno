@@ -21,15 +21,9 @@ I am a **Computer Science Student** and a passionate **Full-Stack Web Developer*
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=white)
 
-**Tools & Platform**
-![Linux Mint](https://img.shields.io/badge/Linux_Mint-87CF3E?style=for-the-badge&logo=linux-mint&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
-### ⚡ Fun Fact
-> "I switched to Linux Mint just to get that extra 1% performance for my 8GB RAM laptop, and it was totally worth it."
 
 <div align="center">
   <a href="mailto:warsenosetyono@gmail.com">
