@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:19191c,100:f97316&height=220&section=header&text=Warseno%20Bambang%20Setyono&fontSize=38&fontColor=ffffff&fontAlignY=35&desc=Fullstack%20Developer&descAlignY=56&descSize=18" width="100%" alt="header" />
 
 <a href="https://seno.web.id">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=F97316&center=true&vCenter=true&width=650&lines=Fullstack+Developer;React+%7C+Next.js+%7C+Laravel+%7C+Node.js;Building+modern+web+experiences" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=F97316&center=true&vCenter=true&width=650&lines=React+%7C+Next.js+%7C+Laravel+%7C+Node.js;Building+modern+web+experiences" alt="typing" />
 </a>
 
 <p>
