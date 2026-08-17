@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://seno.web.id">
-  <img src="assets/jinwoo-pixel.gif" width="720" alt="pixel shadow monarch vs monster" />
+  <img src="assets/dev-desk.gif" width="720" alt="pixel dev coding at night" />
 </a>
 
 # Warseno Bambang Setyono
