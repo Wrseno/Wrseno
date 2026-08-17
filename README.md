@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://seno.web.id">
-  <img src="https://media.tenor.com/KXsa-82gaB8AAAAC/solo-leveling-sung-jin-woo.gif" width="600" alt="sung jin-woo" />
+  <img src="assets/jinwoo-pixel.gif" width="720" alt="pixel shadow monarch vs monster" />
 </a>
 
 # Warseno Bambang Setyono
