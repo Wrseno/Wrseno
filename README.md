@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://seno.web.id">
-  <img src="assets/dev-desk.gif" width="720" alt="pixel dev coding at night" />
+  <img src="assets/dev-desk.gif" width="100%" alt="pixel dev coding at night" />
 </a>
 
 # Warseno Bambang Setyono

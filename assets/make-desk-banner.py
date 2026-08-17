@@ -3,7 +3,7 @@ from PIL import Image
 
 W, H = 128, 48
 SCALE = 6
-GROUND = 42
+GROUND = 44
 N = 16
 
 PAL = {
@@ -28,21 +28,40 @@ PAL = {
     "S": (200, 200, 210),  # steam
 }
 
+# sitting, facing right: straight back, thigh level with the seat,
+# shin down to the floor, one arm reaching the keyboard
 DEV = """
-..hhhh...
-.hhhhhh..
-.hhHfff..
-.hhffef..
-..hffff..
-.CCCCC...
-.CCCCCC..
-.CCDCCCf.
-.CCCCCC..
-..CCCC...
-..CCCCC..
-..k.CCC..
-..k..bb..
+......hhhhh.........
+.....hhhhhhh........
+.....hhhhhff........
+.....hhHffff........
+.....hhhffef........
+......hhffff........
+.......ffff.........
+.......CCC..........
+......CCCCC.........
+.....CCCCCCC........
+.....CCDCCCC........
+.....CCCCCCCC.......
+.....CCCCC.CCCC.....
+.....CCCCC..........
+.....CCCCC..........
+.....CCCCC..........
+.....CCCCC..........
+.....CCCCC..........
+.....CCCCCC.........
+.....CCCCCCCCC......
+......CCCCCCCCC.....
+..........CCCC......
+...........CCC......
+...........CCC......
+...........CCC......
+...........CCC......
+...........CCC......
+..........bbbb......
 """
+
+DEV_OX, DEV_OY = 24, 16
 
 
 def rng(*seed):
@@ -75,86 +94,87 @@ def background(img, frame):
     rect(img, 0, GROUND, W - 1, H - 1, (24, 22, 38))     # floor
     for x in range(W):
         put(img, x, GROUND, (38, 34, 60))
-    # window, top-left, with moon and twinkling stars
-    rect(img, 8, 6, 34, 24, (10, 10, 20))
-    for x in range(8, 35):
-        put(img, x, 6, (52, 48, 80)); put(img, x, 24, (52, 48, 80))
-    for y in range(6, 25):
-        put(img, 8, y, (52, 48, 80)); put(img, 34, y, (52, 48, 80))
-        put(img, 21, y, (52, 48, 80))
-    rect(img, 26, 9, 30, 13, PAL["m"])                    # moon
-    for cx, cy in ((26, 9), (30, 9), (26, 13), (30, 13)):  # round the corners
+    # window fills the left edge, moon + twinkling stars
+    rect(img, 1, 2, 21, 26, (10, 10, 20))
+    for x in range(1, 22):
+        put(img, x, 2, (52, 48, 80)); put(img, x, 26, (52, 48, 80))
+    for y in range(2, 27):
+        put(img, 1, y, (52, 48, 80)); put(img, 21, y, (52, 48, 80))
+        put(img, 11, y, (52, 48, 80))
+    rect(img, 14, 6, 18, 10, PAL["m"])                   # moon
+    for cx, cy in ((14, 6), (18, 6), (14, 10), (18, 10)):
         put(img, cx, cy, (10, 10, 20))
-    rect(img, 27, 10, 28, 11, (200, 196, 170))
-    for i in range(7):                                    # stars
-        x = 10 + rng(i, 1) % 22
-        y = 8 + rng(i, 2) % 14
-        if x != 21 and not (25 <= x <= 31 and 8 <= y <= 14):
+    rect(img, 15, 7, 16, 8, (200, 196, 170))
+    for i in range(7):                                   # stars
+        x = 3 + rng(i, 1) % 17
+        y = 5 + rng(i, 2) % 18
+        if x != 11 and not (13 <= x <= 19 and 5 <= y <= 11):
             on = (i + frame // 2) % 3 != 0
             put(img, x, y, (170, 170, 200) if on else (70, 70, 100))
-    # shelf with books, top-right
-    rect(img, 96, 10, 122, 11, (60, 52, 44))
+    # shelf with books, runs to the right edge
+    rect(img, 100, 9, 127, 10, (60, 52, 44))
     for i, col in enumerate(("p", "c", "y", "g", "p", "c")):
-        rect(img, 98 + i * 4, 4, 100 + i * 4, 9, PAL[col])
+        rect(img, 102 + i * 4, 3, 104 + i * 4, 8, PAL[col])
 
 
 def desk_scene(img, frame):
-    # desk top and legs
-    rect(img, 46, 30, 118, 31, PAL["W"])
-    rect(img, 46, 32, 118, 32, PAL["w"])
-    rect(img, 48, 33, 49, GROUND - 1, PAL["w"])
-    rect(img, 115, 33, 116, GROUND - 1, PAL["w"])
-    # monitor: stand, frame, screen
-    rect(img, 88, 27, 91, 29, PAL["k"])
-    rect(img, 78, 28, 101, 29, PAL["k"])
-    rect(img, 72, 6, 107, 26, PAL["k"])
-    rect(img, 74, 8, 105, 24, PAL["s"])
+    # desk bleeds off the right edge
+    rect(img, 40, 30, 127, 31, PAL["W"])
+    rect(img, 40, 32, 127, 32, PAL["w"])
+    rect(img, 42, 33, 43, GROUND - 1, PAL["w"])
+    rect(img, 120, 33, 121, GROUND - 1, PAL["w"])
+    # monitor: stand, base, frame, screen
+    rect(img, 86, 27, 89, 29, PAL["k"])
+    rect(img, 78, 28, 97, 29, PAL["k"])
+    rect(img, 62, 3, 113, 26, PAL["k"])
+    rect(img, 64, 5, 111, 24, PAL["s"])
     # typed code lines, progress loops over N frames
-    lines = [(1, 10, "p"), (3, 14, "c"), (3, 8, "g"), (5, 12, "y"),
-             (3, 10, "c"), (1, 13, "g")]
+    lines = [(1, 16, "p"), (3, 22, "c"), (3, 12, "g"), (5, 18, "y"),
+             (3, 15, "c"), (1, 20, "g"), (3, 10, "p")]
     total = sum(ln for _, ln, _ in lines)
     prog = (frame + 1) * (total // (N - 2) + 1)
-    sy = 9
+    sy = 7
     for li, (indent, ln, col) in enumerate(lines):
         take = max(0, min(ln, prog))
         prog -= ln
         if take:
-            rect(img, 75 + indent, sy + li * 2, 75 + indent + take - 1,
+            rect(img, 66 + indent, sy + li * 2, 66 + indent + take - 1,
                  sy + li * 2, PAL[col])
     # cursor blink on the active line
     if frame % 2 == 0:
-        put(img, 75 + 1, sy + min(5, max(0, (frame * 6) // N)) * 2 + 1,
+        put(img, 66 + 1, sy + min(6, max(0, (frame * 7) // N)) * 2 + 1,
             (220, 220, 230))
-    # screen glow specks
+    # screen glow specks on the wall
     for i in range(6):
-        x = 70 + rng(i, frame, 3) % 42
-        y = 4 + rng(i, frame, 4) % 26
-        if not (72 <= x <= 107 and 6 <= y <= 26):
+        x = 58 + rng(i, frame, 3) % 60
+        y = 2 + rng(i, frame, 4) % 26
+        if not (62 <= x <= 113 and 3 <= y <= 26):
             put(img, x, y, (50, 46, 84))
     # keyboard
-    rect(img, 62, 29, 74, 29, PAL["k"])
+    rect(img, 45, 29, 58, 29, PAL["k"])
     # mug with steam, right of the monitor
-    rect(img, 111, 27, 114, 29, PAL["u"])
-    put(img, 115, 28, PAL["u"])
+    rect(img, 123, 27, 126, 29, PAL["u"])
+    put(img, 127, 28, PAL["u"])
     for k in range(3):
-        sx = 112 + (rng(k, frame // 2, 7) % 3) - 1
+        sx = 124 + (rng(k, frame // 2, 7) % 3) - 1
         put(img, sx, 24 - k * 2 - (frame % 2), PAL["S"])
 
 
 def dev(img, frame):
-    ox, oy = 52, 17
-    blit(img, DEV, ox, oy)
-    # chair
-    rect(img, 50, 24, 51, 38, PAL["k"])
-    rect(img, 50, 38, 60, 39, PAL["k"])
-    rect(img, 52, 40, 53, GROUND - 1, PAL["k"])
-    rect(img, 58, 40, 59, GROUND - 1, PAL["k"])
-    # typing hand bobs between keyboard and up
-    hy = 28 if frame % 2 else 27
-    put(img, 62, hy, PAL["f"])
-    put(img, 63, hy, PAL["f"])
-    # face lit by screen
-    put(img, 57, 20, (255, 226, 190))
+    # chair behind the body: backrest, seat, legs
+    rect(img, 26, 22, 27, 37, PAL["k"])
+    rect(img, 26, 38, 40, 39, PAL["k"])
+    rect(img, 28, 40, 29, GROUND - 1, PAL["k"])
+    rect(img, 37, 40, 38, GROUND - 1, PAL["k"])
+    blit(img, DEV, DEV_OX, DEV_OY)
+    # forearm + typing hand bobbing over the keyboard
+    hy = 28 if frame % 2 else 29
+    rect(img, DEV_OX + 15, hy, DEV_OX + 18, hy, PAL["C"])
+    put(img, DEV_OX + 19, hy, PAL["f"])
+    put(img, DEV_OX + 20, hy, PAL["f"])
+    put(img, DEV_OX + 21, hy, PAL["f"])
+    # face lit by the screen
+    put(img, DEV_OX + 11, DEV_OY + 4, (255, 226, 190))
 
 
 frames = []
